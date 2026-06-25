@@ -1,0 +1,14 @@
+.btn-primary {
+  background: linear-gradient(135deg, $primary, lighten($primary, 10%));
+  color: $dark;
+  padding: 14px 24px;
+  border-radius: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba($primary, 0.4);
+  }
+}

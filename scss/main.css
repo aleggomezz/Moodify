@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #121212, #181818, #0f0f0f);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1DB954, rgb(43.2009345794, 221.7990654206, 106.1682242991));
+  color: #121212;
+  padding: 14px 24px;
+  border-radius: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(29, 185, 84, 0.4);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #1DB954;
+}
+
+.now-playing {
+  margin-top: 20px;
+  text-align: center;
+}
+.now-playing h3 {
+  margin: 10px 0 5px;
+}
+.now-playing .small {
+  color: #b3b3b3;
+  font-size: 13px;
+}
+.now-playing .bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.now-playing .bar::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 40%;
+  background: #1DB954;
+  animation: loading 1.5s infinite;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+}
+.nav a:hover {
+  opacity: 1;
+  color: #1DB954;
+}/*# sourceMappingURL=main.css.map */

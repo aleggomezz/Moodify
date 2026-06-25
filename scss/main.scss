@@ -1,0 +1,14 @@
+@import "base/variables";
+@import "base/reset";
+@import "base/body";
+@import "components/buttons";
+@import "components/cards";
+@import "components/navbar";
+@keyframes loading {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 100%;
+  }
+}
