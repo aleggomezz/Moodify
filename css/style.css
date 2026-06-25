@@ -1,4 +1,14 @@
-/* NAV PRO */
+/* ==========================================
+   ESTILOS GENERALES Y BASE
+   ========================================== */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #121212, #181818, #0f0f0f);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* NAV GLOBAL */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -19,22 +29,73 @@
   color: #1DB954;
 }
 
-/* HERO PRO */
+/* ==========================================
+   HERO (INDEX / HOME)
+   ========================================== */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 60px 80px;
   gap: 40px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* SUBTITLE */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1511379938547-c1f69419868d") center/cover;
+  opacity: 0.25;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+/* Alineación limpia del Hero Text */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.hero-text h1, 
+.hero-text p {
+  margin: 0;
+}
+
 .subtitle {
   color: #b3b3b3;
   max-width: 450px;
 }
 
-/* BOTONES */
+.green-text {
+  color: #1DB954;
+  font-weight: 600;
+}
+
+/* Contenedor de botones en Hero */
+.hero-text .buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* HERO SMALL (para páginas internas) */
+.hero.small {
+  padding: 40px 80px;
+}
+
+/* ==========================================
+   BOTONES
+   ========================================== */
 .btn-primary {
   background: linear-gradient(135deg, #1DB954, #1ed760);
   color: #121212;
@@ -43,7 +104,7 @@
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -57,8 +118,7 @@
   padding: 14px 24px;
   border-radius: 18px;
   text-decoration: none;
-  margin-left: 10px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .btn-secondary:hover {
@@ -66,67 +126,126 @@
   transform: translateY(-4px);
 }
 
-/* CARD */
+/* Evita desbordes en botones completos */
+.card .full,
+.playlist-info .full,
+.music-card .full {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ==========================================
+   ESTILO GLOBAL DE TARJETAS (INDEX Y PLAYLIST)
+   ========================================== */
+.card,
+.feature-card,
 .music-card {
-  width: 320px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  padding: 30px;
+  border-radius: 24px;
+  box-sizing: border-box; 
+}
+
+.music-card {
+  width: 350px;
+  position: relative;
+  z-index: 2;
+}
+
+.music-card h2 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 22px;
 }
 
 .small-text {
   color: #b3b3b3;
   font-size: 13px;
+  margin: 0;
 }
 
-/* SONG PRO */
+/* ==========================================
+   BLOQUES DE CANCIONES (INDEX)
+   ========================================== */
 .song {
-  margin: 10px 0;
-  padding: 12px;
+  margin: 0 0 14px 0;
+  padding: 14px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.05);
-  transition: 0.3s;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: 0.3s ease;
 }
 
 .song:hover {
   transform: translateX(5px);
   border-left: 3px solid #1DB954;
+  background: rgba(29, 185, 84, 0.08);
 }
 
-/* FEATURES PRO */
+.song strong {
+  display: block;
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.song p {
+  margin: 0;
+  color: #b3b3b3;
+  font-size: 13px;
+}
+
+/* ==========================================
+   FEATURES GRID (HOME)
+   ========================================== */
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
   padding: 60px 80px;
 }
 
 .feature-card {
-  background: rgba(255,255,255,0.05);
-  padding: 25px;
-  border-radius: 20px;
-  transition: 0.3s;
+  transition: 0.3s ease;
+}
+
+.feature-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #b3b3b3;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
   border: 1px solid #1DB954;
 }
-/* HERO SMALL (para páginas internas) */
-.hero.small {
-  padding: 40px 80px;
-}
 
-/* MOODS SECTION */
+/* ==========================================
+   PÁGINA: MOODS (SECCIÓN INTERNA)
+   ========================================== */
 .moods-section {
   padding: 40px 80px 80px;
 }
 
-/* GRID PRO */
 .moods-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-/* MOOD CARD PRO */
 .mood-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
@@ -135,52 +254,32 @@
   text-decoration: none;
   color: white;
   transition: 0.3s;
-
   display: flex;
   flex-direction: column;
   gap: 5px;
+  font-size: 30px;
 }
 
-.mood-card h3 {
-  margin: 0;
+.mood-card h3 { 
+  margin: 0; 
+  font-size: 20px; 
 }
 
-.mood-card p {
-  margin: 0;
-  color: #b3b3b3;
-  font-size: 14px;
+.mood-card p { 
+  margin: 0; 
+  color: #b3b3b3; 
+  font-size: 14px; 
 }
 
-/* HOVER PRO */
 .mood-card:hover {
   transform: translateY(-8px);
   border-color: #1DB954;
   background: rgba(29,185,84,0.08);
 }
 
-/* EMOJI GRANDE */
-.mood-card {
-  font-size: 30px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .moods-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero {
-    padding: 40px;
-  }
-}
-
-@media (max-width: 600px) {
-  .moods-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* PLAYLIST LAYOUT */
+/* ==========================================
+   PÁGINA: PLAYLIST (DETALLE INTERNO)
+   ========================================== */
 .playlist-container {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -188,39 +287,39 @@
   padding: 40px 80px 80px;
 }
 
-/* INFO CARD */
-.playlist-info {
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.playlist-info.card { 
+  padding: 30px; 
+  border-radius: 24px; 
 }
 
-/* FULL BUTTON */
-.full {
+.playlist-info .btn-primary.full,
+.playlist-info .btn-secondary.full {
+  display: block;
   width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-bottom: 10px;
   text-align: center;
 }
 
-/* SONG LIST */
+.playlist-info .btn-secondary.full { 
+  margin-bottom: 0; 
+}
+
 .song-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* SONG ITEM PRO */
 .song-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 15px 20px;
   border-radius: 15px;
-
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
-
   transition: 0.3s;
 }
 
@@ -230,22 +329,15 @@
   background: rgba(29,185,84,0.08);
 }
 
-/* TEXTO SONG */
 .song-item p {
   margin: 0;
   color: #b3b3b3;
   font-size: 13px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .playlist-container {
-    grid-template-columns: 1fr;
-    padding: 30px;
-  }
-}
-
-/* PROFILE LAYOUT */
+/* ==========================================
+   PÁGINA: PERFIL
+   ========================================== */
 .profile-container {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -253,27 +345,23 @@
   padding: 40px 80px 80px;
 }
 
-/* AVATAR */
 .avatar {
   font-size: 60px;
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* USER CARD */
 .profile-card {
   text-align: center;
   height: fit-content;
 }
 
-/* STATS GRID */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
-/* STAT CARD */
 .stat-card {
   text-align: center;
 }
@@ -284,7 +372,6 @@
   color: #1DB954;
 }
 
-/* FAVORITES */
 .favorites {
   grid-column: 1 / -1;
 }
@@ -304,20 +391,54 @@
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* LOGOUT */
 .logout {
   grid-column: 1 / -1;
   text-align: center;
 }
 
-/* RESPONSIVE */
+/* ==========================================
+   RESPONSIVE DESIGNS (MEDIA QUERIES)
+   ========================================== */
 @media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+  }
+  .hero::before { 
+    width: 100%; 
+    height: 100%; 
+  }
+  .music-card { 
+    width: 100%; 
+  }
+  .features { 
+    grid-template-columns: 1fr; 
+    padding: 40px; 
+  }
+  .moods-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .playlist-container { 
+    grid-template-columns: 1fr; 
+    padding: 30px; 
+  }
   .profile-container {
     grid-template-columns: 1fr;
     padding: 30px;
   }
-
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .moods-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .nav { 
+    padding: 20px 40px; 
+    flex-direction: column; 
+    gap: 15px; 
   }
 }
