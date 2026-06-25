@@ -1,0 +1,170 @@
+body {
+  background: linear-gradient(to bottom, #121212, #181818, #0f0f0f);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TARJETAS DE CANCIONES */
+.song {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.song:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* BOTON PRINCIPAL */
+.generate-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #1DB954, #1ed760);
+  color: #121212;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.generate-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.4);
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 80px 80px;
+}
+
+/* CARDS */
+.feature-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 30px;
+  transition: 0.3s;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: #1DB954;
+}
+
+/* ICONOS */
+.feature-card span {
+  font-size: 40px;
+}
+
+/* TITULOS */
+.feature-card h3 {
+  margin: 20px 0 10px;
+  font-size: 24px;
+  color: white;
+}
+
+/* TEXTO */
+.feature-card p {
+  color: #b3b3b3;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+  nav {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    padding: 50px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .features {
+    padding: 0 30px 50px;
+  }
+}
+/* BOTON VERDE PRINCIPAL */
+.primary-btn,
+.generate-btn,
+.login-btn {
+
+  background: linear-gradient(135deg, #1DB954, #1ed760);
+  color: #121212;
+
+  border: none;
+  border-radius: 18px;
+
+  padding: 14px 28px;
+
+  font-weight: 700;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow: 0 8px 25px rgba(29, 185, 84, 0.35);
+}
+
+/* HOVER */
+.primary-btn:hover,
+.generate-btn:hover,
+.login-btn:hover {
+
+  transform: translateY(-3px) scale(1.02);
+
+  box-shadow: 0 12px 30px rgba(29, 185, 84, 0.5);
+
+  background: linear-gradient(135deg, #1ed760, #24ff72);
+}
+
+
+/* BOTON SECUNDARIO */
+.secondary-btn {
+
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 18px;
+
+  padding: 14px 28px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  backdrop-filter: blur(10px);
+}
+
+/* HOVER SECUNDARIO */
+.secondary-btn:hover {
+
+  background: rgba(255,255,255,0.1);
+
+  border-color: #1DB954;
+
+  transform: translateY(-3px);
+}
