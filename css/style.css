@@ -1,170 +1,323 @@
-body {
-  background: linear-gradient(to bottom, #121212, #181818, #0f0f0f);
-  color: white;
-  font-family: 'Poppins', sans-serif;
+/* NAV PRO */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
 }
 
-/* TARJETAS DE CANCIONES */
-.song {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 15px;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: #1DB954;
+}
+
+/* HERO PRO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+/* SUBTITLE */
+.subtitle {
+  color: #b3b3b3;
+  max-width: 450px;
+}
+
+/* BOTONES */
+.btn-primary {
+  background: linear-gradient(135deg, #1DB954, #1ed760);
+  color: #121212;
+  padding: 14px 24px;
   border-radius: 18px;
-  margin-bottom: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(29,185,84,0.4);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.06);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 18px;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  border: 1px solid #1DB954;
+  transform: translateY(-4px);
+}
+
+/* CARD */
+.music-card {
+  width: 320px;
+}
+
+.small-text {
+  color: #b3b3b3;
+  font-size: 13px;
+}
+
+/* SONG PRO */
+.song {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
   transition: 0.3s;
 }
 
 .song:hover {
-  transform: translateY(-3px);
-  background: rgba(255,255,255,0.08);
+  transform: translateX(5px);
+  border-left: 3px solid #1DB954;
 }
 
-/* BOTON PRINCIPAL */
-.generate-btn {
-  width: 100%;
-  margin-top: 20px;
-  padding: 15px;
-  border: none;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #1DB954, #1ed760);
-  color: #121212;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 16px;
-}
-
-.generate-btn:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(29, 185, 84, 0.4);
-}
-
-/* FEATURES */
+/* FEATURES PRO */
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 0 80px 80px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 60px 80px;
 }
 
-/* CARDS */
 .feature-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  border-radius: 25px;
-  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 20px;
   transition: 0.3s;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
-  border-color: #1DB954;
+  border: 1px solid #1DB954;
+}
+/* HERO SMALL (para páginas internas) */
+.hero.small {
+  padding: 40px 80px;
 }
 
-/* ICONOS */
-.feature-card span {
-  font-size: 40px;
+/* MOODS SECTION */
+.moods-section {
+  padding: 40px 80px 80px;
 }
 
-/* TITULOS */
-.feature-card h3 {
-  margin: 20px 0 10px;
-  font-size: 24px;
+/* GRID PRO */
+.moods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* MOOD CARD PRO */
+.mood-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 25px;
+  text-decoration: none;
   color: white;
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-/* TEXTO */
-.feature-card p {
+.mood-card h3 {
+  margin: 0;
+}
+
+.mood-card p {
+  margin: 0;
   color: #b3b3b3;
-  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* HOVER PRO */
+.mood-card:hover {
+  transform: translateY(-8px);
+  border-color: #1DB954;
+  background: rgba(29,185,84,0.08);
+}
+
+/* EMOJI GRANDE */
+.mood-card {
+  font-size: 30px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-
-  nav {
-    padding: 20px 30px;
+  .moods-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero {
-    padding: 50px 30px;
-  }
-
-  .hero-text h1 {
-    font-size: 50px;
-  }
-
-  .features {
-    padding: 0 30px 50px;
+    padding: 40px;
   }
 }
-/* BOTON VERDE PRINCIPAL */
-.primary-btn,
-.generate-btn,
-.login-btn {
 
-  background: linear-gradient(135deg, #1DB954, #1ed760);
-  color: #121212;
+@media (max-width: 600px) {
+  .moods-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-  border: none;
-  border-radius: 18px;
+/* PLAYLIST LAYOUT */
+.playlist-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  padding: 40px 80px 80px;
+}
 
-  padding: 14px 28px;
+/* INFO CARD */
+.playlist-info {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-  font-weight: 700;
-  font-size: 15px;
+/* FULL BUTTON */
+.full {
+  width: 100%;
+  text-align: center;
+}
 
-  cursor: pointer;
+/* SONG LIST */
+.song-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* SONG ITEM PRO */
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 20px;
+  border-radius: 15px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
 
   transition: 0.3s;
-
-  box-shadow: 0 8px 25px rgba(29, 185, 84, 0.35);
 }
 
-/* HOVER */
-.primary-btn:hover,
-.generate-btn:hover,
-.login-btn:hover {
-
-  transform: translateY(-3px) scale(1.02);
-
-  box-shadow: 0 12px 30px rgba(29, 185, 84, 0.5);
-
-  background: linear-gradient(135deg, #1ed760, #24ff72);
+.song-item:hover {
+  transform: translateX(6px);
+  border-left: 3px solid #1DB954;
+  background: rgba(29,185,84,0.08);
 }
 
+/* TEXTO SONG */
+.song-item p {
+  margin: 0;
+  color: #b3b3b3;
+  font-size: 13px;
+}
 
-/* BOTON SECUNDARIO */
-.secondary-btn {
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .playlist-container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+}
 
+/* PROFILE LAYOUT */
+.profile-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
+  padding: 40px 80px 80px;
+}
+
+/* AVATAR */
+.avatar {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* USER CARD */
+.profile-card {
+  text-align: center;
+  height: fit-content;
+}
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* STAT CARD */
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  margin: 0;
+  color: #1DB954;
+}
+
+/* FAVORITES */
+.favorites {
+  grid-column: 1 / -1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tags span {
   background: rgba(255,255,255,0.06);
-
-  color: white;
-
-  border: 1px solid rgba(255,255,255,0.12);
-
-  border-radius: 18px;
-
-  padding: 14px 28px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-
-  backdrop-filter: blur(10px);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* HOVER SECUNDARIO */
-.secondary-btn:hover {
+/* LOGOUT */
+.logout {
+  grid-column: 1 / -1;
+  text-align: center;
+}
 
-  background: rgba(255,255,255,0.1);
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
 
-  border-color: #1DB954;
-
-  transform: translateY(-3px);
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
 }

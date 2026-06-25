@@ -1,86 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moodify</title>
 
+  <title>Moodify | Home</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Moodify genera playlists según tu estado de ánimo usando Spotify">
+  <meta name="keywords" content="música, playlists, spotify, mood, estudio, gym, relax">
+  <meta name="author" content="Alejandro Gomez">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/style.css">
-  
+</head>
+
 <body>
 
-  <nav>
+  <!-- NAV GLOBAL -->
+  <nav class="nav">
     <div class="logo">Moodify 🎵</div>
 
-    <button class="login-btn">Ingresar con Spotify</button>
+    <div class="nav-links">
+      <a href="home.html">Inicio</a>
+      <a href="mood-selector.html">Moods</a>
+      <a href="playlist.html">Playlist</a>
+      <a href="profile.html">Perfil</a>
+    </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
 
     <div class="hero-text">
-      <p class="green-text">Música para cada estado de ánimo</p>
 
-      <h1>Tu mood.<br>Tu playlist.</h1>
+      <p class="green-text">Bienvenido de nuevo 👋</p>
 
-      <p>
-        Moodify crea playlists de Spotify según cómo te sentís y lo que estás haciendo en este momento.
+      <h1>Tu mood,<br>tu música.</h1>
+
+      <p class="subtitle">
+        Moodify crea playlists inteligentes basadas en cómo te sentís en este momento.
       </p>
 
       <div class="buttons">
-        <button class="primary-btn">Comenzar</button>
-        <button class="secondary-btn">Explorar moods</button>
+        <a href="mood-selector.html" class="btn-primary">Elegir mood</a>
+        <a href="playlist.html" class="btn-secondary">Ver última playlist</a>
       </div>
 
-      <div class="moods">
-        <div class="mood">😴 Relax</div>
-        <div class="mood">🔥 Gym</div>
-        <div class="mood">📚 Estudio</div>
-        <div class="mood">🚗 Manejando</div>
-        <div class="mood">💔 Triste</div>
-        <div class="mood">☀️ Feliz</div>
-      </div>
     </div>
 
-    <div class="music-card">
-      <div class="card">
-        <div class="playlist-box">
-          <p>Mood Actual</p>
-          <h2>Modo Concentración 📚</h2>
+    <!-- CARD VISUAL -->
+    <div class="music-card card">
 
-          <div class="song">
-            <h4>Midnight City</h4>
-            <p>M83</p>
-          </div>
+      <p class="small-text">Recomendado para vos</p>
 
-          <div class="song">
-            <h4>Sunflower</h4>
-            <p>Post Malone</p>
-          </div>
+      <h2>Modo Concentración 📚</h2>
 
-          <div class="song">
-            <h4>Blinding Lights</h4>
-            <p>The Weeknd</p>
-          </div>
-
-          <button class="generate-btn">Generar Playlist</button>
-        </div>
+      <div class="song">
+        <strong>Midnight City</strong>
+        <p>M83</p>
       </div>
+
+      <div class="song">
+        <strong>Blinding Lights</strong>
+        <p>The Weeknd</p>
+      </div>
+
+      <div class="song">
+        <strong>Sunflower</strong>
+        <p>Post Malone</p>
+      </div>
+
+      <a href="playlist.html" class="btn-primary full">Generar playlist</a>
+
     </div>
 
   </section>
 
+  <!-- FEATURES -->
   <section class="features">
 
     <div class="feature-card">
-      <span>🎧</span>
-      <h3>Playlists Inteligentes</h3>
-      <p>
-        Playlists generadas automáticamente según tus emociones.
-      </p>
+      🎧
+      <h3>Playlists inteligentes</h3>
+      <p>Generadas según tu estado emocional en tiempo real.</p>
     </div>
+
+    <div class="feature-card">
+      ⚡
+      <h3>Rápido y simple</h3>
+      <p>Elegís tu mood y en segundos tenés música lista.</p>
+    </div>
+
+    <div class="feature-card">
+      🔥
+      <h3>Experiencia Spotify</h3>
+      <p>Diseño inspirado en apps modernas de streaming.</p>
+    </div>
+
+  </section>
 
 </body>
 </html>
